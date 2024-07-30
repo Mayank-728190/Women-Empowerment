@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STORIES</title>
+  <!-- Import Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <header>
+    <h1 class="header"><CENter>Success Stories</CENter></h1>
+  </header>
+  <style>
+    /* Custom styles */
+    body {
+        background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+        background-image: url("bg.png");
+        margin:10;
+        padding:10;
+        height: 100%;
+        background-size: cover;
+        background-position: center
+    }
+    header{
+        padding: 15px 30px; 
+        background: linear-gradient(45deg, #8EC5FC, #E0C3FC);
+        border-radius: 8px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        font-size: 22px; 
+        font-weight: bold;
+        color: #000000;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        border: 2px solid transparent; 
+        text-align:center;
+        line-height:2;
+        font-family:MS;
+        animation: float 3s infinite alternate, textAnimation 2s ease-in-out alternate;
+        color:#020202;
+    }
+        
+    .container{
+      padding-top: 0%;
+        
+
+    .submit-btn {
+      margin-top:15px;
+      background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%); 
+    }
+    .submit-btn:hover {
+      background-color:43359;
+      background-position: right center; /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+          } /* Darker color on hover */
+    }
+    .card {
+      background: linear-gradient(to bottom right, #2196F3, #00BCD4);
+    }
+    .heading {
+      color: black;
+    }
+    /* Style for the label */
+    .input-field label {
+      color: black;
+    }
+    /* Style for the card titles */
+    .card-title {
+      color: #000000; /* Darker color for card titles */
+    }
+  </style>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+  <div class="container">
+    <h4 class="heading">Share Your Experience</h4>
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"><B>Success Stories</B></span>
+            <div class="input-field">
+              <textarea id="success_stories" class="materialize-textarea"></textarea>
+              <!-- Added inline style to label -->
+              <label for="success_stories" style="color: black;">Share your success stories...</label>
+            </div>
+            <button class="btn waves-effect waves-light submit-btn" onclick="submitSuccess()">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"><B>Milestones</B></span>
+            <div class="input-field">
+              <textarea id="milestones" class="materialize-textarea"></textarea>
+              <label for="milestones">Share your milestones...</label>
+            </div>
+            <button class="btn waves-effect waves-light submit-btn" onclick="submitMilestones()">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"><B>Troubles Your Faced</B></span>
+            <div class="input-field">
+              <textarea id="troubles" class="materialize-textarea"></textarea>
+              <label for="troubles">Share your troubles faced...</label>
+            </div>
+            <button class="btn waves-effect waves-light submit-btn" onclick="submitTroubles()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Materialize components
+      M.AutoInit();
+    });
+
+    function submitSuccess() {
+      var successStories = document.getElementById('success_stories').value;
+      console.log('Success Stories:', successStories);
+      document.getElementById('success_stories').value = '';
+      M.toast({html: 'Success Stories submitted successfully!'});
+    }
+
+    function submitMilestones() {
+      var milestones = document.getElementById('milestones').value;
+      console.log('Milestones:', milestones);
+      document.getElementById('milestones').value = '';
+      M.toast({html: 'Milestones submitted successfully!'});
+    }
+
+    function submitTroubles() {
+      var troubles = document.getElementById('troubles').value;
+      console.log('Troubles Faced:', troubles);
+      document.getElementById('troubles').value = '';
+      M.toast({html: 'Troubles Faced submitted successfully!'});
+    }
+  </script>
+</body>
+</html>

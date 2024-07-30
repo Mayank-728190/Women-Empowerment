@@ -1,0 +1,62 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Checker</title>
+</head>
+
+<body>
+
+    <h1>Link Checker</h1>
+
+    <p id="linkStatus">Checking link status...</p>
+
+    <a id="myLink" href="https://www.unfpa.org/resources/issue-7-women-empowerment">My Link</a>
+
+    <script>
+        const link = document.getElementById('myLink');
+        const linkStatus = document.getElementById('linkStatus');
+
+        // Function to check link status
+        const checkLinkStatus = async() => {
+            try {
+                const response = await fetch(link.href);
+                if (response.ok) {
+                    linkStatus.textContent = 'Link is active.';
+                } else {
+                    linkStatus.textContent = 'Link is not active. Changing link...';
+                    link.href = 'https://www.google.com/search?q=women+empowerment&rlz=1C1ONGR_en-GBIN1072IN1073&oq=women&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBwgCEAAYjwIyBwgDEAAYjwIyBwgEEAAYjwIyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgyMTQ3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8'; // Replace with your new link
+                    link.textContent = 'New Link';
+                }
+            } catch (error) {
+                linkStatus.textContent = 'Checking the Link Status..........';
+                console.error('Please wait', error);
+            }
+        };
+
+        // Call the function to check link status
+        checkLinkStatus();
+
+        // Function to open the first link on page load
+        const openFirstLink = () => {
+            // Find the first anchor element on the page
+            const firstLink = document.querySelector('a');
+
+            if (firstLink) { // Check if a link is found
+                // Trigger a click event on the first link
+                firstLink.click();
+            } else {
+                console.log('No links found on the page.');
+            }
+        };
+
+        // Call the function after the page has completely loaded
+        window.addEventListener('load', openFirstLink);
+    </script>
+
+</body>
+
+</html>

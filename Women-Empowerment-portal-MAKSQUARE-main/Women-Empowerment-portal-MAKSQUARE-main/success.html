@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Carousel Example</title>
+    <!-- Link to Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+<header>
+    <nav class="nav"><ul>
+        <li><a href="womenemp.html"style="color: #000000;">Home</a></li>
+        <li><a href="try7.html"style="color: #000000;">Resources</a></li>
+        <li><a href="try9.html"style="color: #000000;"> Women Helpline</a></li>
+        <li><a href="try6.html"style="color: #000000;">News</a></li>
+        <li><a href="try4.html"style="color: #000000;">Contact</a></li>
+    </ul></nav>
+</header>
+    <style>
+        .nav{
+            padding: 15px 30px; 
+            background: linear-gradient(45deg, #8EC5FC, #E0C3FC);
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            font-size: 22px; 
+            font-weight: bold;
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+            border: 2px solid transparent; 
+            text-align:center;
+            line-height:2;
+            font-family:MS;
+            animation: float 3s infinite alternate, textAnimation 2s ease-in-out alternate;
+            color:#020202;
+            }
+
+        body {
+            /* Set gradient background */
+            background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); /* Example gradient colors */
+            margin:10;
+            padding:10;
+            font-family: Arial, sans-serif;
+        }
+        .owl-carousel .item {
+            margin: 5px;
+        }
+        .owl-carousel .item img {
+            display: block;
+            width: 100%;;
+            max-height: 300px; /* Adjust the max-height as needed */
+            margin: 0 auto; /* Center images horizontally */
+        }
+        .owl-carousel {
+            max-height: 220px; /* Adjust the max-height of the carousel container */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Owl Carousel Section -->
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="https://media.assettype.com/newslaundry%2F2022-03%2Fec3f3411-51c2-4a16-aecb-4037df5b80b6%2Fimage_6483441.JPG?auto=format%2Ccompress&w=480&dpr=1.0"></div>
+        <div class="item"><img src="https://media.assettype.com/newslaundry%2F2021-03%2Fc91c302a-3817-45d0-a455-7a7df6a2b87e%2FAI___womens_day_blue.jpg?auto=format%2Ccompress&w=480&dpr=1.0"></div>
+        <div class="item"><img src="https://pbs.twimg.com/media/GGH_nXbXQAA_-rV?format=jpg&name=small"></div>
+        <div class="item"><img src="https://img.freepik.com/premium-photo/happy-women-s-day-card-women-different-ethnicities-flowers-leaves-8-march-theme_852336-51.jpg?w=996"></div>
+        <div class="item"><img src="https://trilateralresearch.com/wp-content/uploads/2022/03/AdobeStock_412043754-1536x474-1-1024x316.jpeg"></div>
+        <div class="item"><img src="https://www.interactsoftware.com/wp-content/uploads/2020/08/2407778-1280x990.png"></div>
+        
+
+        
+    </div>
+
+    <!-- Link to jQuery and Owl Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                autoplay:true, // Enable autoplay
+                autoplayTimeout:3000, // Autoplay interval in milliseconds
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:1,
+                        nav:false
+                    },
+                    1000:{
+                        items:1,
+                        nav:true,
+                        loop:false
+                    }
+                }
+            })
+        });
+    </script>
+    <br>
+    <br>
+
+
+
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="https://cdn.vectorstock.com/i/preview-1x/47/50/hand-holding-megaphone-with-success-stories-vector-45954750.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">SUCCESS STORIES<i class="material-icons right"></i></span>
+                        <p><a href="msg.html">Success Stories</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">SUCCESS STORIES<i class="material-icons right"></i></span>
+                        <p>we encourage you to share your inspiring success stories with us, ladies. Your achievements, big or small, serve as a beacon of motivation and empowerment for us all.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat the above card markup two more times to create a total of three cards -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="https://www.scoro.com/wp-content/uploads/2021/07/Milestones-in-Project-Management-%E2%80%93-Scoro.png" height="225
+                        ">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Milestones<i class="material-icons right"></i></span>
+                        <p><a href="msg.html">Milestones</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Milestones<i class="material-icons right"></i></span>
+                        <p>we invite you to share your significant milestones with us. Whether it's achieving a long-awaited goal, marking a personal or professional milestone, or celebrating a special moment in your life, we want to hear about it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="https://thirdspacelearning.com/wp-content/uploads/2022/09/word-problems.jpg" height="225">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Troubles Your Faced<i class="material-icons right"></i></span>
+                        <p><a href="msg.html">Troubles Faced</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Troubles Your Faced<i class="material-icons right"></i></span>
+                        <p>If you're facing challenges or difficulties along the way, we want you to know that you're not alone. We encourage you to share your struggles with us openly and without hesitation.</p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Materialize components
+            M.AutoInit();
+        });
+    </script>
+   
+
+</body>
+</html>
+
